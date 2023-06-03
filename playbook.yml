@@ -1,0 +1,19 @@
+---
+- hosts: "Kostyukov"
+  become: true
+  tasks:
+   - name: "Installing cmatrix"
+     become_method: sudo
+     become: yes
+     apt: pkg=cmatrix state=present
+
+   - name: "Installing cowsay"
+     become_method: sudo
+     become: yes
+     apt: pkg=cowsay state=present
+
+   - name: "Installing sl"
+     become_method: sudo
+     become: yes
+     apt: pkg=sl state=present
+...
